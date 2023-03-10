@@ -1,9 +1,9 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
+#import pandas as pd
+#import numpy as np
 from transformers import pipeline
-import os
-from io import StringIO
+#import os
+#from io import StringIO
 
 st.title('Please upload the file which you want to summarize.')
 
