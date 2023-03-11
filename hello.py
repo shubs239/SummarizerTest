@@ -27,12 +27,12 @@ st.title('Please upload the file which you want to summarize.')
 #summarizer = pipeline("summarization", model="t5-base", tokenizer="t5-base", framework="tf")
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 def summarize_text(text: str, max_len: int) -> str:
-    try:
+    #try:
         summary = summarizer(text, max_length=max_len, min_length=10, do_sample=False)
         return summary[0]["summary_text"]
-    except IndexError as ex:
+    #except IndexError as ex:
         
-        return summarize_text(text=text[:(len(text) // 2)], max_len=max_len//2) + summarize_text(text=text[(len(text) // 2):], max_len=max_len//2)
+        #return summarize_text(text=text[:(len(text) // 2)], max_len=max_len//2) + summarize_text(text=text[(len(text) // 2):], max_len=max_len//2)
 
 
 
